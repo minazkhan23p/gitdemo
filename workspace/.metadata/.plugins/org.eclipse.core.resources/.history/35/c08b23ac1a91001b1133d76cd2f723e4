@@ -1,0 +1,29 @@
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class vegetable {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver", "D:\\SS1\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://rahulshettyacademy.com/seleniumPractise/#/");
+		driver.manage().window().maximize();
+		Thread.sleep(2000);
+		List<WebElement>prod=driver.findElements(By.cssSelector(".product-name"));
+		int prodSize =prod.size();
+		for(int i=0;i<prodSize;i++){
+			if(prod.get(i).getText().contains("Cucumber")){
+				driver.findElements(By.xpath("//button[text()='ADD TO CART']")).get(0).click();
+				break;
+			}
+		}
+		Thread.sleep(2000);
+		driver.quit();
+	}
+
+}

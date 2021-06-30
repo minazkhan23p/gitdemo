@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="testrunner" project="Automation" tests="8" started="8" failures="0" errors="0" ignored="0">
+  <testsuite name="run.testrunner" time="0.001">
+    <testsuite name="Feature: Application Login" time="0.001">
+      <testsuite name="Scenario: Homepage default Login" time="0.0">
+        <testcase name="Given User has landed to the login page" classname="Scenario: Homepage default Login" time="0.0"/>
+        <testcase name="When user has provided &quot;minaz&quot; and &quot;abc123&quot;" classname="Scenario: Homepage default Login" time="0.0"/>
+        <testcase name="And clicks on login button" classname="Scenario: Homepage default Login" time="0.0"/>
+        <testcase name="Then user is landed to the homepage" classname="Scenario: Homepage default Login" time="0.0"/>
+      </testsuite>
+      <testsuite name="Scenario: Homepage default Login2" time="0.0">
+        <testcase name="Given User has landed to the login page" classname="Scenario: Homepage default Login2" time="0.0"/>
+        <testcase name="When user has provided &quot;min&quot; and &quot;adfv123&quot;" classname="Scenario: Homepage default Login2" time="0.0"/>
+        <testcase name="And clicks on login button" classname="Scenario: Homepage default Login2" time="0.0"/>
+        <testcase name="Then user is landed to the homepage" classname="Scenario: Homepage default Login2" time="0.0"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

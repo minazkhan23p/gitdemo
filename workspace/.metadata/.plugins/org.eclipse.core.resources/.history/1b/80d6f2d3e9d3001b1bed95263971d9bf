@@ -1,0 +1,12 @@
+package stepdef;
+
+import cucumber.api.java.en.Given;
+
+public class stepdef1 {
+	
+	@Given("^User has landed to the login page$")
+	public void User_has_landed_to_the_login_page{
+		
+	}
+
+}

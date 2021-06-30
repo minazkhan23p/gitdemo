@@ -1,0 +1,106 @@
+package com.Icontract.TestNG;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.testng.TestNG;
+import org.testng.xml.XmlPackage;
+import org.testng.xml.XmlSuite;
+import org.testng.xml.XmlTest;
+import com.Icontract.DataBin.MasterDetails;
+
+public class TestNGBuilder extends TestNGDataProvider {
+	
+	/**
+	 * For EAM start methods to form dynamic testNG run file
+	 * @author ashishkumar.singh 
+	 * 
+	 * @param args
+	 * @throws Exception
+	 */
+	public static void main(String[] args) throws Exception {
+		List<MasterDetails> dataProvider = getDataFromDataBase();
+		MasterDetails masterDetails = new MasterDetails();
+		if (dataProvider.size() > 0) {
+			masterDetails = dataProvider.get(0);
+			
+			//For Main suite configurations
+			XmlSuite xmlsuite = new XmlSuite();
+			xmlsuite.setName(masterDetails.getSuiteName());
+			xmlsuite.setParallel("tests");
+			xmlsuite.setThreadCount(dataProvider.size());
+			xmlsuite.setVerbose(12);
+			xmlsuite.setDataProviderThreadCount(dataProvider.size());
+			xmlsuite.setParameters(getAllSuiteParameters(masterDetails));
+			
+			List<XmlTest> testList = new ArrayList<XmlTest>();
+			List<XmlPackage> packageList = new ArrayList<XmlPackage>();
+			for (int dataSet = 0; dataSet < dataProvider.size(); dataSet++) {
+				masterDetails = dataProvider.get(dataSet);
+				
+				//Tests creation
+				XmlTest xmlTest = new XmlTest(xmlsuite);
+				xmlTest.setVerbose(2);
+				xmlTest.setName(masterDetails.getTestName());
+				xmlTest.setPreserveOrder("true");
+				xmlTest.setParameters(getAllTestParameters(masterDetails));
+				
+				// adding the packages in tests
+				XmlPackage xmlPackage1 = new XmlPackage("com.zycus.Framework");
+				XmlPackage xmlPackage2 = new XmlPackage("com.Icontract.TestCase");
+				packageList.add(xmlPackage1);
+				packageList.add(xmlPackage2);
+				xmlTest.setXmlPackages(packageList);
+
+				//Adding all above details in List
+				testList.add(xmlTest);
+			}
+			
+			//TestNG suite run configuration
+			TestNG testNG = new TestNG();
+			List<XmlSuite> suites = new ArrayList<XmlSuite>();
+			suites.add(xmlsuite);
+			testNG.setXmlSuites(suites);
+//			testNG.setGroups(EAM_Compliance,EAM_Reports,EAM_Clause,"EAM_Request,EAM_Authoring,EAM_Repository,EAM_Dashboard,EAM_CentralConsole,EAM_RequestAmendment,EAM_Templates,EAM_AlertsAndReminder");
+//			testNG.setGroups("TMS,EAM_Search,EAM_Templates,EAM_Reports,EAM_CentralConsole,EAM_Clause");
+			testNG.setGroups("EAM_AlertsAndReminder");//EAM_Templates EAM_Reports
+			testNG.run();
+		} else {
+			System.out.println("Status is not active for any data set. Please change status to 1 of required data set");
+		}
+	}
+
+
+	/**
+	 * This method is to set all the suite parameters that are required to run this suite
+	 * @author ashishkumar.singh
+	 * @param masterDetails 
+	 * @return
+	 */
+	private static Map<String, String> getAllSuiteParameters(MasterDetails masterDetails) {
+		HashMap< String,String> parameters = new HashMap< String,String>();
+		parameters.put("browsername", masterDetails.getBrowserName());
+		parameters.put("browserversion", String.valueOf(masterDetails.getBrowserVersion()));
+		parameters.put("platform", masterDetails.getPlateform());
+		parameters.put("Application", masterDetails.getApplication());
+		return parameters;
+	}
+	/**
+	 * This method is to set all the test parameters that are required to run this test
+	 * @author ashishkumar.singh
+	 * @param masterDetails 
+	 * @return
+	 */
+	private static Map<String, String> getAllTestParameters(MasterDetails masterDetails) {
+		HashMap< String,String> parameters = new HashMap< String,String>();
+		//parameters.put("ID", String.valueOf(masterDetails.getID()));
+		parameters.put("ClientIdentifier", masterDetails.getClientIdentifier());
+		parameters.put("url", masterDetails.getURL());
+		parameters.put("userName", masterDetails.getUserName());
+		parameters.put("passWord", masterDetails.getPassword());
+		return parameters;
+	}	
+}

@@ -1,0 +1,16 @@
+import java.util.Arrays;
+import java.util.List;
+
+import org.testng.annotations.Test;
+
+public class Map {
+	
+	public static void main(String[] args)  {
+		String[] names = { "MINAZ", "Abhijith", "ram", "Adam", "alekhya" };
+		
+		List<String> nameList = Arrays.asList(names);
+		nameList.stream().filter(s->s.endsWith("m")).map(s->s.toUpperCase()).forEach(s->System.out.println(s));
+				
+
+	}
+}

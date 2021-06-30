@@ -1,0 +1,6 @@
+Academy\E2EProject\App.class
+PageObjects\landingPage.class
+resources\ExtenReport.class
+PageObjects\LoginPage.class
+PageObjects\ForgotPage.class
+resources\base.class

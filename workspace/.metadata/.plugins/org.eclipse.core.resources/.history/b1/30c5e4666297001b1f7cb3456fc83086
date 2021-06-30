@@ -1,0 +1,22 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
+
+public class actions {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver", "D:\\SS1\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		//WebDriverWait w = new WebDriverWait(driver, 5);
+				driver.get("https://www.amazon.com/");
+				driver.manage().window().maximize();
+				Actions a =new  Actions(driver);
+				a.moveToElement(driver.findElement(By.cssSelector("#nav-link-accountList"))).build().perform();
+				Thread.sleep(2000);
+				driver.quit();
+	}
+
+}

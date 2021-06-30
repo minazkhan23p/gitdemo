@@ -1,0 +1,26 @@
+import java.util.Iterator;
+import java.util.Set;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WindowType;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Invokingmultiplewindows {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver", "D:\\SS1\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://rahulshettyacademy.com/angularpractice/");
+		driver.switchTo().newWindow(WindowType.TAB);
+		Set<String> win=driver.getWindowHandles();
+		Iterator<String> it=win.iterator();
+		String parent=it.next();
+		String child=it.next();
+		driver.switchTo().window(child);
+		driver.get("https://rahulshettyacademy.com/#/index");
+		
+	}
+
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="testrunner (1)" project="E2EProject" tests="5" started="5" failures="0" errors="0" ignored="5">
+  <testsuite name="Academy.E2EProject.run.testrunner" time="0.0">
+    <testsuite name="Feature: Application Login" time="0.0">
+      <testsuite name="Scenario: E2E Login validation" time="0.0" incomplete="true">
+        <skipped/>
+        <testcase name="Given inititialize the driver with chrome" classname="Scenario: E2E Login validation" time="0.0" ignored="true"/>
+        <testcase name="And navigate to &quot;http://www.qaclickacademy.com/&quot; site" classname="Scenario: E2E Login validation" time="0.0" ignored="true"/>
+        <testcase name="When user clicks on Login in homepage and user has provided &quot;minaz&quot; and &quot;abc123&quot;" classname="Scenario: E2E Login validation" time="0.0" ignored="true"/>
+        <testcase name="And clicks on login button" classname="Scenario: E2E Login validation" time="0.0" ignored="true"/>
+        <testcase name="Then user is landed to the homepage" classname="Scenario: E2E Login validation" time="0.0" ignored="true"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

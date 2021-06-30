@@ -1,0 +1,27 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import com.mysql.cj.jdbc.Driver;
+
+public class Test1 {
+
+	public static void main(String[] args) throws SQLException {
+		// TODO Auto-generated method stub
+		
+		//url="jdbc:mysql://"+host":"+port+"/databasename";
+		//url="jdbc:mysql://"+host":"+port+"/qadbt";
+		String host="localhost";
+		String port="3306";
+		Connection con=DriverManager.getConnection("jdbc:mysql://"+host+":"+port+"/qadbt", "root", "Vecthor23#");
+		Statement exec=con.createStatement();
+		ResultSet rs=exec.executeQuery("select * from employeeinfo where id=2");
+		while(rs.next()){
+		System.out.println(rs.getString("name"));
+		System.out.println(rs.getString("id"));
+		}
+	}
+
+}

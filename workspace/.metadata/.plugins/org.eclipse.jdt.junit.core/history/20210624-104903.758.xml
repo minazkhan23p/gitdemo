@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="testrunner" project="Automation" tests="4" started="4" failures="0" errors="0" ignored="4">
+  <testsuite name="run.testrunner" time="0.0">
+    <testsuite name="Feature: Application Login" time="0.0">
+      <testsuite name="Scenario: Homepage default Login" time="0.0" incomplete="true">
+        <skipped/>
+        <testcase name="Given User has landed to the login page" classname="Scenario: Homepage default Login" time="0.0" ignored="true"/>
+        <testcase name="When user has provided username and password" classname="Scenario: Homepage default Login" time="0.0" ignored="true"/>
+        <testcase name="And clicks on login button" classname="Scenario: Homepage default Login" time="0.0" ignored="true"/>
+        <testcase name="Then user is landed to the homepage" classname="Scenario: Homepage default Login" time="0.0" ignored="true"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

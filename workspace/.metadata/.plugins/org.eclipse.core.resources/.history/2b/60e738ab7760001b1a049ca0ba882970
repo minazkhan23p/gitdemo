@@ -1,0 +1,93 @@
+package com.Icontract.TestNG;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.Icontract.DataBin.MasterDetails;
+import com.zycus.Framework.ConnectionProvider;
+
+public class TestNGDataProvider {
+	
+	
+	/**
+	 * To get the master data for EAM suite
+	 * @author ashishkumar.singh 
+	 * @return
+	 * @throws Exception 
+	 */
+	protected static List<MasterDetails> getDataFromDataBase() throws Exception {
+
+		Connection dataBaseConnection = null;
+		Statement statement = null;
+		List<MasterDetails> objList = new ArrayList<MasterDetails>();
+	
+		try
+		{
+			dataBaseConnection = ConnectionProvider.getDataBaseConnection();
+			{
+				try
+				{
+					statement = dataBaseConnection.createStatement();
+			        
+			        ResultSet result = statement.executeQuery("select * from masterdetails where Status =1 ");
+
+			        while (result.next()) {
+			        	MasterDetails masterDetails = new MasterDetails();
+			        	setDataInObject(result, masterDetails);
+			        	objList.add(masterDetails);
+			        	System.out.println(masterDetails.toString());
+			        }
+				}
+				catch (SQLException e)
+				{
+					//throw new DatabindingException(e);
+					throw new Exception(e);
+				}
+
+			}
+		}
+		finally
+		{
+			if (dataBaseConnection != null)
+			{
+				try {
+					dataBaseConnection.close();
+				} catch (SQLException e) {
+				}
+			}
+
+		}
+		return objList;
+	}
+
+	
+	/**
+	 * To set the values in masterDetails object 
+	 * @param result
+	 * @param masterDetails
+	 */
+	private static void setDataInObject(ResultSet result, MasterDetails masterDetails) {
+		try {
+			masterDetails.setID(result.getInt("ID"));
+			masterDetails.setClientIdentifier(result.getString("ClientIdentifier"));
+			masterDetails.setStatus(result.getInt("Status"));
+			masterDetails.setURL(result.getString("URL"));
+			masterDetails.setUserName(result.getString("UserName"));
+			masterDetails.setPassword(result.getString("Password"));
+			masterDetails.setContractNumber(result.getString("ContractNumber"));
+			masterDetails.setSuiteName(result.getString("SuiteName"));
+			masterDetails.setBrowserName(result.getString("BrowserName"));
+			masterDetails.setBrowserVersion(result.getInt("BrowserVersion"));
+			masterDetails.setPlateform(result.getString("Plateform"));
+			masterDetails.setApplication(result.getString("Application"));
+			masterDetails.setTestName(result.getString("TestName"));
+			
+		} catch (SQLException e) {
+		}
+	}
+	
+}

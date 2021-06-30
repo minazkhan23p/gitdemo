@@ -1,0 +1,29 @@
+package stepdef;
+
+import cucumber.api.java.en.And;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class stepdef1 {
+	
+	@Given("^User has landed to the login page$")
+	public void User_has_landed_to_the_login_page(){
+		
+	}
+	@When("^user has provided username and password$")
+	public void user_has_provided_username_and_password(){
+		
+	}
+	
+	@And("^clicks on login button$")
+	public void clicks_on_login_button(){
+		
+	}
+	
+	@Then("^user is landed to the homepage")
+	public void user_is_landed_to_the_homepage(){
+		
+	}
+
+}

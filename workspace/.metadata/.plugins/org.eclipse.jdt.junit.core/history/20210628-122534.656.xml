@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="testrunner (2)" project="E2EProject" tests="10" started="10" failures="0" errors="0" ignored="6">
+  <testsuite name="run.testrunner" time="8.945">
+    <testsuite name="Feature: Application Login" time="8.945">
+      <testsuite name="Scenario Outline: E2E Login validation" time="8.945">
+        <testsuite name="Examples:" time="8.945">
+          <testsuite name="| minaz | test@123 |" time="3.201" incomplete="true">
+            <skipped/>
+            <testcase name="Given inititialize the driver with chrome" classname="| minaz | test@123 |" time="3.198"/>
+            <testcase name="And navigate to &quot;http://www.qaclickacademy.com/&quot; site" classname="| minaz | test@123 |" time="0.002"/>
+            <testcase name="When user clicks on Login in homepage and user has provided minaz and test@123" classname="| minaz | test@123 |" time="0.0" ignored="true"/>
+            <testcase name="And clicks on login button" classname="| minaz | test@123 |" time="0.001" ignored="true"/>
+            <testcase name="Then user is landed to the homepage" classname="| minaz | test@123 |" time="0.0" ignored="true"/>
+          </testsuite>
+          <testsuite name="| khan | mxosni |" time="1.736" incomplete="true">
+            <skipped/>
+            <testcase name="Given inititialize the driver with chrome" classname="| khan | mxosni |" time="1.73"/>
+            <testcase name="And navigate to &quot;http://www.qaclickacademy.com/&quot; site" classname="| khan | mxosni |" time="0.001"/>
+            <testcase name="When user clicks on Login in homepage and user has provided khan and mxosni" classname="| khan | mxosni |" time="0.004" ignored="true"/>
+            <testcase name="And clicks on login button" classname="| khan | mxosni |" time="0.001" ignored="true"/>
+            <testcase name="Then user is landed to the homepage" classname="| khan | mxosni |" time="0.0" ignored="true"/>
+          </testsuite>
+        </testsuite>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

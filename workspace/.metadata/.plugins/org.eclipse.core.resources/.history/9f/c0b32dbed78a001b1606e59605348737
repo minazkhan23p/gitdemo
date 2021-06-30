@@ -1,0 +1,13 @@
+package Intro;
+
+public class Demo1 {
+
+	public void Sum() {
+		int a =2;
+		int b=3;
+		System.out.println(a+b);
+		// TODO Auto-generated method stub
+
+	}
+
+}

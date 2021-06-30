@@ -1,0 +1,4 @@
+15:28:15.372 [main] DEBUG ALpha.Demo - debug message
+15:28:15.373 [main] INFO  ALpha.Demo - info loggs
+15:28:15.374 [main] ERROR ALpha.Demo - error message
+15:28:15.374 [main] FATAL ALpha.Demo - fatal message

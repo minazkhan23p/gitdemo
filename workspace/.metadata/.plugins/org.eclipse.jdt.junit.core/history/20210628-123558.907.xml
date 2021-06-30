@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="testrunner (2)" project="E2EProject" tests="12" started="12" failures="0" errors="4" ignored="4">
+  <testsuite name="run.testrunner" time="26.992">
+    <testsuite name="Feature: Application Login" time="26.992">
+      <testsuite name="Scenario Outline: E2E Login validation" time="26.992">
+        <testsuite name="Examples:" time="26.992">
+          <testsuite name="| minaz | test@123 |" time="12.159" incomplete="true">
+            <error>java.lang.NullPointerException&#13;
+	at stepdef.stepdef1.clicks_on_login_button(stepdef1.java:50)&#13;
+	at ✽.And clicks on login button(feature1.feature:9)&#13;
+&#13;
+</error>
+            <testcase name="Given inititialize the driver with chrome" classname="| minaz | test@123 |" time="4.585"/>
+            <testcase name="And navigate to &quot;http://www.qaclickacademy.com/&quot; site" classname="| minaz | test@123 |" time="7.571"/>
+            <testcase name="When user clicks on Login in homepage and user has provided minaz and test@123" classname="| minaz | test@123 |" time="0.001"/>
+            <testcase name="And clicks on login button" classname="| minaz | test@123 |" time="0.002">
+              <error>java.lang.NullPointerException&#13;
+	at stepdef.stepdef1.clicks_on_login_button(stepdef1.java:50)&#13;
+	at ✽.And clicks on login button(feature1.feature:9)&#13;
+&#13;
+</error>
+            </testcase>
+            <testcase name="Then user is landed to the homepage" classname="| minaz | test@123 |" time="0.0" ignored="true"/>
+            <testcase name="And close browser" classname="| minaz | test@123 |" time="0.001" ignored="true"/>
+          </testsuite>
+          <testsuite name="| khan | mxosni |" time="11.865" incomplete="true">
+            <error>java.lang.NullPointerException&#13;
+	at stepdef.stepdef1.clicks_on_login_button(stepdef1.java:50)&#13;
+	at ✽.And clicks on login button(feature1.feature:9)&#13;
+&#13;
+</error>
+            <testcase name="Given inititialize the driver with chrome" classname="| khan | mxosni |" time="4.156"/>
+            <testcase name="And navigate to &quot;http://www.qaclickacademy.com/&quot; site" classname="| khan | mxosni |" time="7.708"/>
+            <testcase name="When user clicks on Login in homepage and user has provided khan and mxosni" classname="| khan | mxosni |" time="0.0"/>
+            <testcase name="And clicks on login button" classname="| khan | mxosni |" time="0.0">
+              <error>java.lang.NullPointerException&#13;
+	at stepdef.stepdef1.clicks_on_login_button(stepdef1.java:50)&#13;
+	at ✽.And clicks on login button(feature1.feature:9)&#13;
+&#13;
+</error>
+            </testcase>
+            <testcase name="Then user is landed to the homepage" classname="| khan | mxosni |" time="0.001" ignored="true"/>
+            <testcase name="And close browser" classname="| khan | mxosni |" time="0.002" ignored="true"/>
+          </testsuite>
+        </testsuite>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

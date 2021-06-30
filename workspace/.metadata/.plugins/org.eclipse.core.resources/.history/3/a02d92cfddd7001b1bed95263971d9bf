@@ -1,0 +1,10 @@
+Feature: Application Login
+
+
+Scenario: E2E Login validation
+
+Given inititialize the driver with chrome 
+And navigate to "http://www.qaclickacademy.com/" site
+When user clicks on Login in homepage and user has provided "minaz" and "abc123"
+And clicks on login button
+Then user is landed to the homepage

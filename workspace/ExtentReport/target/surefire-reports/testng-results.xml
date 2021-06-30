@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="21999" started-at="2021-05-25T09:45:26 IST" finished-at="2021-05-25T09:45:48 IST">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="21999" started-at="2021-05-25T09:45:26 IST" finished-at="2021-05-25T09:45:48 IST">
+      <class name="academy.ExtentReport.WebLoginTest">
+        <test-method status="PASS" signature="extentReport()[pri:0, instance:academy.ExtentReport.WebLoginTest@6c49835d]" name="extentReport" is-config="true" duration-ms="113" started-at="2021-05-25T09:45:26 IST" finished-at="2021-05-25T09:45:26 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentReport -->
+        <test-method status="PASS" signature="url()[pri:0, instance:academy.ExtentReport.WebLoginTest@6c49835d]" name="url" duration-ms="21864" started-at="2021-05-25T09:45:26 IST" finished-at="2021-05-25T09:45:48 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- url -->
+      </class> <!-- academy.ExtentReport.WebLoginTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

@@ -1,0 +1,22 @@
+package package1;
+
+import java.util.*;
+import java.io.*;
+ 
+public class csa {​​​​​​​​
+static String str1="";
+public static String FirstReverse(String str){​​​​​​​​
+// code goes here  
+for(int i=str.length()-1;i>=0;i--){​​​​​​​​
+    str1=str1+str.charAt(i);}
+return str1;
+}​​​​​​​​
+ 
+public static void main (String[] args){​​​​​​​​
+// keep this function call here     
+    Scanner s =new Scanner(System.in);
+    System.out.print(FirstReverse(s.nextLine()));
+}​​​​​​​​
+ 
+}​​​​​​​​
+

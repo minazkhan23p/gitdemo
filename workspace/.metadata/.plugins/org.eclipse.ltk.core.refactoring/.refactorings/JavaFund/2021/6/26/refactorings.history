@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;JavaFund/bin/Central.class&apos; to &apos;Central.java&apos;" description="Rename resource &apos;Central.class&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="bin/Central.class" name="Central.java" stamp="1624682995186" updateReferences="true"/>
+</session>

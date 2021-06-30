@@ -1,0 +1,7 @@
+11:27:50.082 [main] INFO  Academy.E2EProject.HomePage - user
+11:27:57.658 [main] INFO  Academy.E2EProject.HomePage - not a user
+11:28:04.896 [main] INFO  Academy.E2EProject.titleValidation - title validated
+11:28:23.100 [main] INFO  Academy.E2EProject.ValidateNavigationBar - ValidateNavigationBar
+11:41:52.734 [TestNG] INFO  Academy.E2EProject.titleValidation - title validated
+11:41:57.196 [TestNG] INFO  Academy.E2EProject.HomePage - user
+11:42:04.884 [TestNG] INFO  Academy.E2EProject.ValidateNavigationBar - ValidateNavigationBar

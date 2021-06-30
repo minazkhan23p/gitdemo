@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="33" started-at="2021-05-23T14:51:50 IST" finished-at="2021-05-23T14:51:50 IST">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="33" started-at="2021-05-23T14:51:50 IST" finished-at="2021-05-23T14:51:50 IST">
+      <class name="academy.MavenJava.Test1Test">
+        <test-method status="PASS" signature="test1a()[pri:0, instance:academy.MavenJava.Test1Test@5a8e6209]" name="test1a" duration-ms="0" started-at="2021-05-23T14:51:50 IST" finished-at="2021-05-23T14:51:50 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1a -->
+        <test-method status="PASS" signature="test1b()[pri:0, instance:academy.MavenJava.Test1Test@5a8e6209]" name="test1b" duration-ms="0" started-at="2021-05-23T14:51:50 IST" finished-at="2021-05-23T14:51:50 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1b -->
+      </class> <!-- academy.MavenJava.Test1Test -->
+      <class name="academy.MavenJava.Test2Test">
+        <test-method status="PASS" signature="test2a()[pri:0, instance:academy.MavenJava.Test2Test@520a3426]" name="test2a" duration-ms="3" started-at="2021-05-23T14:51:50 IST" finished-at="2021-05-23T14:51:50 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2a -->
+        <test-method status="PASS" signature="test2b()[pri:0, instance:academy.MavenJava.Test2Test@520a3426]" name="test2b" duration-ms="1" started-at="2021-05-23T14:51:50 IST" finished-at="2021-05-23T14:51:50 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2b -->
+      </class> <!-- academy.MavenJava.Test2Test -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
